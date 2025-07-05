@@ -1,11 +1,15 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,js}",
-    "./*.html", // إذا كان لديك ملفات HTML في المجلد الرئيسي
-    "./**/*.html" // ليشمل جميع المجلدات الفرعية
+  content: ["./*.html", "./src/**/*.{html,js}"],
+  safelist: [
+    "bg-[url('./img/home3.jpg')]"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      }
+    }
   },
   plugins: [],
 }
